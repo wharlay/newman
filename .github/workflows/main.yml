@@ -1,0 +1,37 @@
+name: api-test
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at 12 midnight
+    
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+    steps:
+        
+    # Install the newman command line utility and also install the html extra reporter
+     # - name: Install newman report
+      #  run: |
+       #   npm install -g newman
+       #   npm install -g newman-reporter-html
+
+      - uses: actions/checkout@main
+      #- uses: wharlay/newman@main
+        with:
+          apiKey: ${{ secrets.POSTMAN_API_KEY }}
+          collection: 36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29
+  
+    # Make directory to upload the test results
+      - name: Make Directory for results
+        run: mkdir -p testResults
+          
+
+      # Upload the contents of Test Results directory to workspace
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
+        with:
+          name: RunReports
+          path: testResults

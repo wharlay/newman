@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matt-ball/newman-action.git"
+    "url": "git+https://github.com/wharlay/newman.git"
   },
   "keywords": [
     "actions",

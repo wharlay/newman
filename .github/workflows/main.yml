@@ -16,20 +16,20 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: "10"
+          node-version: "12.x"
         
     # Install the newman command line utility and also install the html extra reporter
       - name: Install newman
         run: |
           npm install -g newman
-          npm install -g newman-reporter-htmlextra
+          npm npm install -g newman-reporter-html
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main
         with:
           apiKey: PMAK-6687fe113eddb60001032243-153a97dc1e429d72e464b13c4af211792c
           collection: 36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29
-          reporters: '["htmlextra"]'
+          reporters: '["html"]'
   
     # Make directory to upload the test results
       - name: Make Directory for results

@@ -11,10 +11,16 @@ jobs:
   api-test:
     runs-on: ubuntu-latest
     steps:
+
+    # INstall Node on the runner
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10"
         
     # Install the newman command line utility and also install the html extra reporter
-     # - name: Install newman report
-       # run: npm i newman-reporter-htmlextra
+      - name: Install newman report
+        run: npm i newman-reporter-htmlextra
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main

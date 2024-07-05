@@ -64,7 +64,7 @@ inputs:
   requestAgents:
     description: 'Specify the custom requesting agents to be used when performing HTTP and HTTPS requests respectively.'
   cookieJar:
-    description: 'Pass a CookieJar file path as string to this property that will be deserialized using tough-cookie.
+    description: 'Pass a CookieJar file path as string to this property that will be deserialized using tough-cookie.'
 runs:
   using: 'node20'
   main: 'dist/index.js'

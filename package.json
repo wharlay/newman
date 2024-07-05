@@ -1,27 +1,18 @@
 {
-  "name": "newman-reporter-htmlextra",
-  "version": "1.23.1",
-  "description": "A newman reporter with added handlebars helpers and separated request iterations",
-  "main": "index.js",
-  "preferGlobal": true,
-  "scripts": {
-    "test": "node npm/test-all.js",
-    "test-integration": "node npm/test-integration.js",
-{
   "name": "newman-action",
   "version": "2.0.0",
   "description": "Run Postman collections with Newman as a GitHub Action",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wharlay/newman.git"
+    "url": "git+https://github.com/wharlay/api-test.git"
   },
   "keywords": [
     "actions",
     "postman",
     "newman"
   ],
-  "author": "Matt Ball",
+  "author": "Wale",
   "license": "Apache-2.0",
   "dependencies": {
     "@actions/core": "^1.10.1",

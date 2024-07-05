@@ -19,7 +19,7 @@ jobs:
        #   npm install -g newman-reporter-html
 
       - uses: actions/checkout@main
-      #- uses: wharlay/newman@main
+      - uses: wharlay/newman@main
         with:
           apiKey: ${{ secrets.POSTMAN_API_KEY }}
           collection: 36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29

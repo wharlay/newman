@@ -13,8 +13,8 @@ jobs:
     steps:
         
     # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman report
-        run: npm i newman-reporter-htmlextra
+     # - name: Install newman report
+       # run: npm i newman-reporter-htmlextra
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main

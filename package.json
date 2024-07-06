@@ -2,10 +2,10 @@
   "name": "newman-action",
   "version": "2.0.0",
   "description": "Run Postman collections with Newman as a GitHub Action",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wharlay/api-test.git"
+    "url": "git+https://github.com/wharlay/newman.git"
   },
   "keywords": [
     "actions",

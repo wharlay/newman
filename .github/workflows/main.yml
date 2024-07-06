@@ -22,7 +22,7 @@ jobs:
         run: npm install -S  newman-reporter-htmlextra
 
       - name: list 
-        run: ls -a
+        run: ls dist
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main

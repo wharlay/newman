@@ -20,7 +20,9 @@ jobs:
     # Install the newman command line utility and also install the html extra reporter
       - name: Install newman report
         run: npm install -S  newman-reporter-htmlextra
-        working-directory: /home/runner/work/newman/dist
+
+      - name: list 
+        run: ls -a
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main

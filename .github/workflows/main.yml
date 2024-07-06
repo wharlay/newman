@@ -19,9 +19,7 @@ jobs:
 
     # Install the newman command line utility and also install the html extra reporter
       - name: Install newman report
-        run: |
-          npm install -S  newman@6.0.0
-          npm install -S  newman-reporter-htmlextra
+        run: npm install -S  newman-reporter-htmlextra
 
       - uses: actions/checkout@main
       - uses: wharlay/newman@main
@@ -31,14 +29,9 @@ jobs:
         #  reporters: '["cli"]'
           reporter: '["htmlextra"]'
   
-    # Make directory to upload the test results
-      - name: Make Directory for results
-        run: mkdir -p testResults
-          
 
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         uses: actions/upload-artifact@v4
         with:
           name: RunReports
-          path: testResults

@@ -12,10 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         
-    # Install HTML report to do 
+   # Install Node on the runner
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "20"
 
+    # install the html  reporter TODO
+
+     # - name: Install 
+       # run:  npm install -S newman-reporter-htmlextra
+
+# Job to run 
       - uses: actions/checkout@main
-      - uses: wharlay/api-test@main
+      - uses: wharlay/newman@main
         with:
           apiKey: PMAK-6687fe113eddb60001032243-153a97dc1e429d72e464b13c4af211792c
           collection: 36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29

@@ -6,16 +6,17 @@ on:
     branches: [ main, master ]
   schedule:
     - cron: '0 0 * * *' # Runs daily at 12 midnight
+    
 jobs:
-  automated-api-tests:
+  api-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Postman CLI
-        run: |
-          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
-      - name: Login to Postman CLI
-        run: postman login --with-api-key PMAK-6687fe113eddb60001032243-153a97dc1e429d72e464b13c4af211792c
-      - name: Run API tests
-        run: |
-          postman collection run "36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29"
+        
+    # Install HTML report to do 
+
+      - uses: actions/checkout@main
+      - uses: wharlay/api-test@main
+        with:
+          apiKey: PMAK-6687fe113eddb60001032243-153a97dc1e429d72e464b13c4af211792c
+          collection: 36687321-d9ce477a-7d69-4130-901a-e19c44f3ab29
+          reporters: '["cli","json"]'
